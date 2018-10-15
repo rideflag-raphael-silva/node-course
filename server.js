@@ -58,6 +58,13 @@ app.get('/about',(req, res) => {
 }
 );
 
+app.get('/projects',(req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Title',
+  });
+}
+);
+
 app.get('/bad',(req, res) => {
   res.send({
     errorMessage: '[ERROR] Unable to complete the request.'
@@ -67,3 +74,10 @@ app.get('/bad',(req, res) => {
 /**/
 //app.listen(3000,() => console.log('Server is up and running'));
 app.listen(port,() => console.log(`Server is up and running ${port}`));
+
+
+//heroku --Help
+//heroku login
+//heroku create
+//git push heroku
+//heroku open
